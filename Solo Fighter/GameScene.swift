@@ -9,37 +9,55 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    let player = SKSpriteNode(imageNamed: "playerShip")
+    
+    let bulletSound = SKAction.playSoundFileNamed("laserSound.mp3", waitForCompletion: false)
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
-        self.addChild(myLabel)
+        let background = SKSpriteNode(imageNamed: "background")
+        background.size = self.size
+        background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+        background.zPosition = 0
+        self.addChild(background)
+        
+        
+        player.setScale(1)
+        player.position = CGPoint(x: self.size.width/2, y: self.size.height * 0.2)
+        player.zPosition = 2
+        self.addChild(player)
+        
+    }
+
+    func fireBullet (){
+        let bullet = SKSpriteNode(imageNamed: "bullet")
+        bullet.setScale(1)
+        bullet.position = player.position
+        bullet.zPosition = 1
+        self.addChild(bullet)
+        
+        let moveBullet = SKAction.moveToY(self.size.height + bullet.size.height, duration: 1)
+        let deleteBullet = SKAction.removeFromParent()
+        let bulletSequence = SKAction.sequence([bulletSound, moveBullet, deleteBullet])
+        bullet.runAction(bulletSequence)
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
-        
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
+        fireBullet()
     }
-   
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        for touch: AnyObject in touches{
+            let pointOfTouch = touch.locationInNode(self)
+            let previousPointOfTouch = touch.previousLocationInNode(self)
+            
+            let amountDragged = pointOfTouch.x - previousPointOfTouch.x
+            
+            player.position.x += amountDragged
+            
+            
+        }
     }
 }
