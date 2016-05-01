@@ -2,7 +2,7 @@
 //  GameViewController.swift
 //  Solo Fighter
 //
-//  Created by John Doe on 4/24/16.
+//  Created by Isaiah Weaver on 4/24/16.
 //  Copyright (c) 2016 Mobile Shah. All rights reserved.
 //
 

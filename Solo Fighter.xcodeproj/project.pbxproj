@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F39B8921CCD8F5800AB919A /* Imperfect Lock.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Imperfect Lock.m4a"; sourceTree = "<group>"; };
 		7F560FC91CCD024D00D99195 /* Solo Fighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Solo Fighter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F560FCC1CCD024D00D99195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F560FCE1CCD024D00D99195 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 				7F560FD41CCD024D00D99195 /* Main.storyboard */,
 				7F560FD71CCD024D00D99195 /* Assets.xcassets */,
 				7F560FE41CCD0BEE00D99195 /* laserSound.mp3 */,
+				7F39B8921CCD8F5800AB919A /* Imperfect Lock.m4a */,
 				7F560FD91CCD024D00D99195 /* LaunchScreen.storyboard */,
 				7F560FDC1CCD024D00D99195 /* Info.plist */,
 			);
@@ -304,6 +306,7 @@
 				7F560FE11CCD024D00D99195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
