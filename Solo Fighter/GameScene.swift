@@ -58,8 +58,22 @@ class GameScene: SKScene {
        
         let backgroundMusic = SKAudioNode(fileNamed: "Imperfect Lock.m4a")
         backgroundMusic.autoplayLooped = true
-        addChild(backgroundMusic)
+        self.addChild(backgroundMusic)
+        
+        startNewLevel()
 
+        
+        
+    }
+    
+    
+    func startNewLevel(){
+        
+        let spawn = SKAction.runBlock(spawnEnemy)
+        let waitToSpawn = SKAction.waitForDuration(1)
+        let spawnSequence = SKAction.sequence([spawn,waitToSpawn])
+        let spawnForever = SKAction.repeatActionForever(spawnSequence)
+        self.runAction(spawnForever)
         
         
     }
@@ -107,7 +121,7 @@ class GameScene: SKScene {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         fireBullet()
-        spawnEnemy()
+        
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
