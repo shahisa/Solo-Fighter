@@ -15,6 +15,7 @@
 		7F560FD81CCD024D00D99195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F560FD71CCD024D00D99195 /* Assets.xcassets */; };
 		7F560FDB1CCD024D00D99195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F560FD91CCD024D00D99195 /* LaunchScreen.storyboard */; };
 		7F560FE51CCD0BEE00D99195 /* laserSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F560FE41CCD0BEE00D99195 /* laserSound.mp3 */; };
+		7FB536811CD9AF3A00707EB3 /* Imperfect Lock.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7F39B8921CCD8F5800AB919A /* Imperfect Lock.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 			files = (
 				7F560FCF1CCD024D00D99195 /* GameScene.sks in Resources */,
 				7F560FDB1CCD024D00D99195 /* LaunchScreen.storyboard in Resources */,
+				7FB536811CD9AF3A00707EB3 /* Imperfect Lock.m4a in Resources */,
 				7F560FE51CCD0BEE00D99195 /* laserSound.mp3 in Resources */,
 				7F560FD81CCD024D00D99195 /* Assets.xcassets in Resources */,
 				7F560FD61CCD024D00D99195 /* Main.storyboard in Resources */,

@@ -14,7 +14,7 @@ class GameScene: SKScene {
     let player = SKSpriteNode(imageNamed: "playerShip")
     let bulletSound = SKAction.playSoundFileNamed("laserSound.mp3", waitForCompletion: false)
    
-    var audioPlayer: AVAudioPlayer?
+    
     
    //functions are for randomly generating enemyShips
     
@@ -50,7 +50,7 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         
         
-        
+        //Background Imagae
         let background = SKSpriteNode(imageNamed: "background")
         background.size = self.size
         background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
@@ -58,48 +58,25 @@ class GameScene: SKScene {
         self.addChild(background)
        
         
-        
+        //Player
         player.setScale(1)
         player.position = CGPoint(x: self.size.width/2, y: self.size.height * 0.2)
         player.zPosition = 2
         self.addChild(player)
   
-        // first attempt for background music
+        // Background Music
         
         let backgroundMusic = SKAudioNode(fileNamed: "Imperfect Lock.m4a")
         backgroundMusic.autoplayLooped = true
         self.addChild(backgroundMusic)
-        /* This code below starts a SIGABART error. I don't know why.
-        backgroundMusic.runAction(SKAction.play()) */
+        backgroundMusic.runAction(SKAction.play())
+        
+        //Start the game
         startNewLevel()
-        playBGMusic()
+        
 
         
         
-    }
-    func playBGMusic() {
-        
-        // Storing the location of the mp3 into the url constant
-        let url = NSBundle.mainBundle().URLForResource("Imperfect Lock", withExtension: "m4a")
-        var error: NSError?
-        
-        do {
-            
-            // Storing the url of the mp3 into the audio player
-            try audioPlayer = AVAudioPlayer(contentsOfURL: url!)
-            audioPlayer?.numberOfLoops = -1 // Will play for a infinite amount
-            audioPlayer?.prepareToPlay()
-            audioPlayer?.play()
-            
-        } catch let error1 as NSError {
-            
-            error = error1
-        }
-        
-        if error != nil {
-            
-            print("We have a problem \(error.debugDescription)")
-        }
     }
     
     
