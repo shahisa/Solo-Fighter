@@ -10,7 +10,7 @@
 <img src="http://i.imgur.com/EBV1tal.gif">
 
 ##Notes
-Have a backgroundMusic variable the will not currently play the background music chosen. Need to fix.
+Added background music of Hans Zimmer "Imperfect Lock" from the movie Interstellar. 
 
 ##Things Left to Complete
 1. Create proper leveling system.
