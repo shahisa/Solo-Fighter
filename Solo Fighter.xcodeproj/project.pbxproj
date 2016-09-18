@@ -15,6 +15,7 @@
 		7F560FD81CCD024D00D99195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F560FD71CCD024D00D99195 /* Assets.xcassets */; };
 		7F560FDB1CCD024D00D99195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F560FD91CCD024D00D99195 /* LaunchScreen.storyboard */; };
 		7F560FE51CCD0BEE00D99195 /* laserSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F560FE41CCD0BEE00D99195 /* laserSound.mp3 */; };
+		7F6B2CFB1CF4911800AF2EE3 /* theBoldFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F6B2CFA1CF4911800AF2EE3 /* theBoldFont.ttf */; };
 		7FB536811CD9AF3A00707EB3 /* Imperfect Lock.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7F39B8921CCD8F5800AB919A /* Imperfect Lock.m4a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		7F560FDA1CCD024D00D99195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F560FDC1CCD024D00D99195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F560FE41CCD0BEE00D99195 /* laserSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laserSound.mp3; sourceTree = "<group>"; };
+		7F6B2CFA1CF4911800AF2EE3 /* theBoldFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = theBoldFont.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				7F560FD01CCD024D00D99195 /* GameScene.swift */,
 				7F560FD21CCD024D00D99195 /* GameViewController.swift */,
 				7F560FD41CCD024D00D99195 /* Main.storyboard */,
+				7F6B2CFA1CF4911800AF2EE3 /* theBoldFont.ttf */,
 				7F560FD71CCD024D00D99195 /* Assets.xcassets */,
 				7F560FE41CCD0BEE00D99195 /* laserSound.mp3 */,
 				7F39B8921CCD8F5800AB919A /* Imperfect Lock.m4a */,
@@ -108,6 +111,7 @@
 				TargetAttributes = {
 					7F560FC81CCD024D00D99195 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -135,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F560FCF1CCD024D00D99195 /* GameScene.sks in Resources */,
+				7F6B2CFB1CF4911800AF2EE3 /* theBoldFont.ttf in Resources */,
 				7F560FDB1CCD024D00D99195 /* LaunchScreen.storyboard in Resources */,
 				7FB536811CD9AF3A00707EB3 /* Imperfect Lock.m4a in Resources */,
 				7F560FE51CCD0BEE00D99195 /* laserSound.mp3 in Resources */,
@@ -272,6 +277,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.Morganstate.isaiahcliftonweaver.Solo-Fighter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -285,6 +291,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.Morganstate.isaiahcliftonweaver.Solo-Fighter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
